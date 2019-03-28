@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    hostname: localhost
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 5         # DO NOT DO THIS IN PRODUCTION
+  client:
+    registerWithEureka: false
+    fetchREgistry: false
+server:
+  port: 1111
